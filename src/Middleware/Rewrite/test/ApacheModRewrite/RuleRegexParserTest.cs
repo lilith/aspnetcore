@@ -26,4 +26,10 @@ public class RuleRegexParserTest
         Assert.False(results.Invert);
         Assert.Equal("(.*)", results.Operand);
     }
+    
+    [Fact]
+    public void RuleRegexParser_ShouldParseWordClass()
+    {
+        var results = RuleRegexParser.ParseRuleRegex(@"(\w*)");
+    }
 }
